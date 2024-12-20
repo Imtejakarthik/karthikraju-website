@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import { skillsData } from "@/lib/data";
+import { skillsData, Skill } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
+import { IconType } from 'react-icons';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -31,7 +32,7 @@ export default function Skills() {
     >
       <SectionHeading>My Skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => {
+        {skillsData.map((skill: Skill, index: number) => {
           const Icon = skill.icon;
           return (
             <motion.li
@@ -45,7 +46,9 @@ export default function Skills() {
               }}
               custom={index}
             >
-              <Icon className="h-10 w-10" style={{ color: skill.color }} />
+              <div className="h-10 w-10" style={{ color: skill.color }}>
+                <Icon size={40} />
+              </div>
               <span>{skill.name}</span>
             </motion.li>
           );

@@ -1,5 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
+import { ReactElement } from 'react';
+import { IconType } from 'react-icons';
 import { FaReact, FaCode, FaDatabase } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import {
@@ -126,12 +128,12 @@ export const projectsData = [
   },
 ] as const;
 
-export interface Skill {
-  name: string;
-  icon: React.ComponentType;
-  color: string;
-}
 
+export type Skill = {
+  name: string;
+  icon: IconType;
+  color: string;
+};
 export const skillsData: Skill[] = [
   {
     name: "HTML 5",
