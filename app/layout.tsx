@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google';
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
@@ -10,8 +10,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ricardo | Personal Portfolio",
-  description: "Ricardo is a full-stack developer with 8 years of experience.",
+  title: "TEJA KARTHIK",
+  description: "I'm not your average code wrangler, Think of me as a modern-day tech alchemist",
 };
 
 export default function RootLayout({
@@ -41,3 +41,4 @@ export default function RootLayout({
     </html>
   );
 }
+
