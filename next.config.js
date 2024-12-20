@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  
+  // Enable Server Actions
   experimental: {
-    serverActions: {
-      allowedOrigins: ['localhost:3000', 'your-production-domain.com'],
-    },
+    serverActions: true,
   },
+  
+  // Configure image domains and remote patterns if needed
   images: {
+    domains: ['example.com'],
     remotePatterns: [
       {
         protocol: 'https',
